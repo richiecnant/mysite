@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(curl -sI --max-time 10 https://www.aiking.dev/)",
+      "Bash(curl -sI --max-time 10 https://aiking.dev/)",
+      "Bash(nslookup aiking.dev)",
+      "Bash(curl -s --max-time 15 'https://www.aiking.dev/')",
+      "Bash(npm create *)",
+      "Bash(export PATH=\"/opt/homebrew/bin:/usr/local/bin:$HOME/.nvm/versions/node/*/bin:$PATH\")",
+      "Read(//Users/ant/.nvm/versions/**)",
+      "Read(//opt/homebrew/bin/**)",
+      "Read(//usr/local/bin/**)",
+      "Read(//Users/ant/Library/**)",
+      "Read(//Users/ant/.volta/**)",
+      "Bash(brew install *)",
+      "Bash(cp -r /Users/ant/E/Claude/mysite/mysite-temp/* /Users/ant/E/Claude/mysite/)",
+      "Bash(cp -r /Users/ant/E/Claude/mysite/mysite-temp/.* /Users/ant/E/Claude/mysite/)",
+      "Bash(npm install *)"
+    ]
+  }
+}
