@@ -87,9 +87,11 @@ export default function Hero() {
             {/* Glow behind avatar */}
             <div className="absolute -inset-8 bg-gradient-to-br from-amber-gold/20 to-purple-accent/20 rounded-full blur-3xl" />
             <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full border-2 border-amber-gold/20 overflow-hidden bg-dark-card">
-              <div className="w-full h-full flex items-center justify-center text-6xl">
-                <span className="gradient-text text-8xl font-bold">A</span>
-              </div>
+              <img
+                src={`${import.meta.env.BASE_URL}avatar.jpeg`}
+                alt="举个啥栗子"
+                className="w-full h-full object-cover"
+              />
             </div>
             {/* Decorative ring */}
             <div className="absolute -inset-3 rounded-full border border-purple-accent/20 animate-[spin_20s_linear_infinite]" />
