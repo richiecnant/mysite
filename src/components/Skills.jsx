@@ -6,10 +6,10 @@ const skills = [
   { name: '项目管理', percent: 100, detail: 'Jira・飞书项目・敏捷管理' },
   { name: '业务落地', percent: 90, detail: 'GA・埋点设计・用户运营' },
   { name: 'Vibe Coding', percent: 70, detail: 'Claude Code・codebuddy・Trae' },
-  { name: 'Agent搭建', percent: 70, detail: 'Coze' },
+  { name: 'Agent搭建', percent: 70, detail: 'Coze・Dify・N8n' },
   { name: 'Vibe Design', percent: 50, detail: 'Google stitch・figma' },
   { name: 'Prompt', percent: 60, detail: 'LLM・AI生图・AI生视频' },
-  { name: 'AI工具', percent: 65, detail: 'Gemini・GPT・Obsidian' },
+  { name: 'AI工具', percent: 80, detail: 'Gemini・GPT・Obsidian' },
 ]
 
 const LEVELS = 5

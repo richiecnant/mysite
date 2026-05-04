@@ -54,7 +54,7 @@ export default function Hero() {
             className="rounded-2xl border border-white/10 bg-dark-card/60 backdrop-blur-sm p-5 sm:p-6 max-w-lg"
           >
             <p className="text-sm sm:text-base text-white/60 leading-relaxed">
-              10年+职业产品经理，AI 与金融投资赛道独行探索者。跳出职场固有框架，躬身入局 OPC 创业赛道。信奉以产品视角洞见趋势，借 AI 势能重构商业，按自己的节奏定义人生赛道。
+              10 年 + 产品经理从业沉淀，深耕 AI 产品实战与落地应用。跳出职场固有框架，躬身入局 OPC 创业赛道。信奉以产品视角洞见行业趋势，借 AI 之势拓新破局，按自己的节奏定义人生赛道。
             </p>
           </motion.div>
 
