@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowLeft } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 import { categories, articles } from '../data/articles'
 
 const SECTION_RE = /^(引言[：:]|结语[：:]|一[、.]|二[、.]|三[、.]|四[、.]|五[、.]|六[、.])/
@@ -95,14 +95,16 @@ export default function ArticleDetail() {
   return (
     <section className="relative min-h-screen pt-24 pb-16 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
-        {/* Back */}
-        <Link
-          to={`/insight/${category}`}
-          className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-amber-gold transition-colors mb-8"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          {cat.name}
-        </Link>
+        {/* Breadcrumb */}
+        <nav className="flex items-center gap-1.5 text-sm text-white/40 mb-8 flex-wrap">
+          <Link to="/" className="hover:text-amber-gold transition-colors">首页</Link>
+          <ChevronRight className="h-3.5 w-3.5 shrink-0" />
+          <Link to="/insight" className="hover:text-amber-gold transition-colors">栗子洞察</Link>
+          <ChevronRight className="h-3.5 w-3.5 shrink-0" />
+          <Link to={`/insight/${category}`} className="hover:text-amber-gold transition-colors">{cat.name}</Link>
+          <ChevronRight className="h-3.5 w-3.5 shrink-0" />
+          <span className="text-white/60 truncate min-w-0">{article.title}</span>
+        </nav>
 
         {/* Article */}
         <motion.article
