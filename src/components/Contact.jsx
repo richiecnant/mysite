@@ -30,6 +30,7 @@ const contacts = [
     label: '微信',
     value: 'ai_ant',
     href: '#',
+    scrollToTop: true,
     color: 'hover:text-green-400',
   },
   {

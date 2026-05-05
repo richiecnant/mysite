@@ -2,14 +2,12 @@ import { useMemo } from 'react'
 import ScrollAnimation from './ScrollAnimation'
 
 const skills = [
-  { name: '产品规划', percent: 100, detail: 'Axure・processon・需求池管理' },
-  { name: '项目管理', percent: 100, detail: 'Jira・飞书项目・敏捷管理' },
-  { name: '业务落地', percent: 90, detail: 'GA・埋点设计・用户运营' },
-  { name: 'Vibe Coding', percent: 70, detail: 'Claude Code・codebuddy・Trae' },
-  { name: 'Agent搭建', percent: 70, detail: 'Coze・Dify・N8n' },
-  { name: 'Vibe Design', percent: 50, detail: 'Google stitch・figma' },
-  { name: 'Prompt', percent: 60, detail: 'LLM・AI生图・AI生视频' },
-  { name: 'AI工具', percent: 80, detail: 'Gemini・GPT・Obsidian' },
+  { name: '通用产品', percent: 100, detail: '需求管理・产品规划・敏捷项目管理' },
+  { name: 'AI落地', percent: 90, detail: 'RAG 知识库搭建・Agent智能体设计・工作流编排' },
+  { name: '企业业务', percent: 90, detail: '行业解决方案设计・业务流程优化' },
+  { name: 'Vibe Coding', percent: 80, detail: 'Claude Code・CodeBuddy・Trae' },
+  { name: 'Vibe Design', percent: 50, detail: 'Figma・Stitch・原型快速交付' },
+  { name: 'AI效率工具', percent: 80, detail: '多模态内容生成・Prompt工程・Gemini・GPT・Obsidian' },
 ]
 
 const LEVELS = 5
@@ -83,7 +81,7 @@ export default function Skills() {
       <div className="max-w-5xl mx-auto">
         <ScrollAnimation>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-[0.15em] text-center mb-8">
-            <span className="gradient-text">技能</span>
+            <span className="gradient-text">技能栈</span>
           </h2>
         </ScrollAnimation>
 
@@ -182,16 +180,22 @@ export default function Skills() {
               ))}
             </div>
 
+            <p className="text-center text-sm text-white/40 mt-0 mb-4">
+              懂业务逻辑的 AI 技术实践者，擅长用 Vibe Coding 快速交付商用原型。
+            </p>
+
             {/* Description cards */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mt-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 mt-2">
               {skills.map((s) => (
                 <div
                   key={s.name}
-                  className="text-center rounded-xl border border-white/5 bg-white/[0.02] px-2 py-2.5"
+                  className="flex items-center gap-3 rounded-xl border border-white/5 bg-white/[0.02] px-3 py-2.5"
                 >
-                  <div className="text-lg sm:text-xl font-bold text-amber-gold">{s.percent}%</div>
-                  <div className="text-xs font-semibold text-white mt-0.5">{s.name}</div>
-                  <div className="text-[10px] text-white/30 mt-0.5">{s.detail}</div>
+                  <div className="text-lg sm:text-xl font-bold text-amber-gold shrink-0">{s.percent}%</div>
+                  <div className="min-w-0">
+                    <div className="text-sm font-semibold text-white">{s.name}</div>
+                    <div className="text-[10px] text-white/30 mt-1 truncate">{s.detail}</div>
+                  </div>
                 </div>
               ))}
             </div>
