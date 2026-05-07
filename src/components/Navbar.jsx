@@ -32,29 +32,31 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const scrollToSection = (id) => {
+    if (id === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      return
+    }
+    const el = document.getElementById(id)
+    if (!el) return
+    const NAV_HEIGHT = 80
+    const y = el.getBoundingClientRect().top + window.pageYOffset - NAV_HEIGHT
+    window.scrollTo({ top: y, behavior: 'smooth' })
+  }
+
   const handleNavClick = (e, href) => {
     e.preventDefault()
     const id = href.slice(1)
+    const wasMobileOpen = mobileOpen
+    setMobileOpen(false)
 
+    const scroll = () => scrollToSection(id)
     if (location.pathname === '/') {
-      if (id === 'top') {
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-      } else {
-        const el = document.getElementById(id)
-        if (el) el.scrollIntoView({ behavior: 'smooth' })
-      }
+      wasMobileOpen ? setTimeout(scroll, 300) : scroll()
     } else {
       navigate('/')
-      setTimeout(() => {
-        if (id === 'top') {
-          window.scrollTo({ top: 0, behavior: 'smooth' })
-        } else {
-          const el = document.getElementById(id)
-          if (el) el.scrollIntoView({ behavior: 'smooth' })
-        }
-      }, 100)
+      setTimeout(scroll, wasMobileOpen ? 400 : 100)
     }
-    setMobileOpen(false)
   }
 
   const isInsight = location.pathname.startsWith('/insight')

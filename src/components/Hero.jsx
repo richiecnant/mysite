@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex items-center justify-center min-h-screen px-4 sm:px-6"
+      className="relative flex items-center justify-center min-h-screen px-4 pt-20 pb-12 lg:pt-0 lg:pb-0 sm:px-6"
     >
       <div className="relative z-10 w-full max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         {/* Left: Text */}
