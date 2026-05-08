@@ -1,4 +1,3 @@
-
 ---
 title: "40岁以后，请把“随时会死”写进人生备忘录"
 category: "product"
