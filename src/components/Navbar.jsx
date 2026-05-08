@@ -79,7 +79,7 @@ export default function Navbar() {
         }} className="flex items-center gap-3 group">
           <img src={`${import.meta.env.BASE_URL}logo.png`} alt="logo" className="h-8 w-8 rounded-full object-cover" />
           <span className="text-lg font-bold gradient-text">
-            举个啥栗子 · 2026
+            举个啥栗子 · AGI 2026 在路上
           </span>
         </Link>
 
