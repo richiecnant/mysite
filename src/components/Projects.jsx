@@ -2,180 +2,134 @@ import ScrollAnimation from './ScrollAnimation'
 
 const projects = [
   {
-    name: '礼小夯',
-    role: '礼品顾问',
-    desc: '深耕全场景礼品甄选，适配节日、商务、亲友送礼等各类需求，精准洞察心意，定制专属高质感礼品方案，省心又有格调。',
-    color: '#00ff88',
-    icon: (
-      <svg viewBox="0 0 120 120" className="w-full h-full">
-        <defs>
-          <linearGradient id="gift-g" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#00ff88" stopOpacity="0.25" />
-            <stop offset="100%" stopColor="#00ff88" stopOpacity="0.08" />
-          </linearGradient>
-        </defs>
-        <rect width="120" height="120" rx="16" fill="url(#gift-g)" />
-        <rect x="30" y="55" width="60" height="35" rx="4" fill="none" stroke="#00ff88" strokeWidth="2" />
-        <rect x="30" y="50" width="60" height="10" rx="3" fill="none" stroke="#00ff88" strokeWidth="2" />
-        <line x1="60" y1="50" x2="60" y2="90" stroke="#00ff88" strokeWidth="2" />
-        <path d="M60 50 Q50 30 40 38 Q35 42 42 48" fill="none" stroke="#00ff88" strokeWidth="2" />
-        <path d="M60 50 Q70 30 80 38 Q85 42 78 48" fill="none" stroke="#00ff88" strokeWidth="2" />
-      </svg>
-    ),
+    id: '01',
+    title: 'AI 智能客服助手',
+    pain: '客服重复回复占用大量人力，夜间咨询无法及时处理，工单与客户信息无法沉淀，响应速度慢导致客户流失。',
+    solutions: ['AI 自动回复客户问题', '知识库智能检索（RAG）', '自动生成工单与会话摘要', '情绪识别与人工转接', '接入网站/微信/企业微信/WhatsApp'],
+    value: ['客服成本降低 40%–70%', '响应时间缩短至秒级', '夜间咨询 24×7 自动承接', '提升客户满意度与转化率'],
+    tech: ['Agent', '多轮对话', 'RAG', 'CRM 对接', '私有化部署'],
   },
   {
-    name: '抖小文',
-    role: '抖音口播文案大师',
-    desc: '支持抖音视频文案一键提取、爆款脚本拆解与创意二创，适配各类赛道口播风格，帮你轻松写出抓人引流的优质文案。',
-    color: '#a855f7',
-    icon: (
-      <svg viewBox="0 0 120 120" className="w-full h-full">
-        <defs>
-          <linearGradient id="dou-g" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#a855f7" stopOpacity="0.25" />
-            <stop offset="100%" stopColor="#a855f7" stopOpacity="0.08" />
-          </linearGradient>
-        </defs>
-        <rect width="120" height="120" rx="16" fill="url(#dou-g)" />
-        <rect x="35" y="25" width="50" height="70" rx="6" fill="none" stroke="#a855f7" strokeWidth="2" />
-        <polygon points="52,45 52,70 72,57.5" fill="#a855f7" opacity="0.6" />
-        <path d="M75 35 Q80 25 82 40 Q84 55 78 45" fill="none" stroke="#a855f7" strokeWidth="2" />
-        <line x1="42" y1="82" x2="55" y2="82" stroke="#a855f7" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
-    ),
+    id: '02',
+    title: 'AI 营销内容生成',
+    pain: '内容生产速度慢，多平台运营成本高，广告测试效率低，内容团队依赖人工经验。',
+    solutions: ['批量生成文案与短视频脚本', 'A/B 测试内容自动生成', '多语种本地化', '爆款风格内容复刻', '自动适配不同平台风格'],
+    value: ['内容产能提升 5–10 倍', '内容成本降低 60%+', '上线周期从周缩短到天', '提升广告点击率与转化率'],
+    tech: ['Prompt Engineering', '内容工作流', '模型微调', '多平台自动发布'],
   },
   {
-    name: '哈小皮',
-    role: '表情包制作达人',
-    desc: '只需上传个人头像，一键智能生成 16 宫格趣味专属表情包，风格多样可随心搭配，打造独一无二的专属社交表情素材。',
-    color: '#06b6d4',
-    icon: (
-      <svg viewBox="0 0 120 120" className="w-full h-full">
-        <defs>
-          <linearGradient id="emoji-g" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.25" />
-            <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.08" />
-          </linearGradient>
-        </defs>
-        <rect width="120" height="120" rx="16" fill="url(#emoji-g)" />
-        <circle cx="60" cy="58" r="30" fill="none" stroke="#06b6d4" strokeWidth="2" />
-        <circle cx="48" cy="50" r="3" fill="#06b6d4" />
-        <circle cx="72" cy="50" r="3" fill="#06b6d4" />
-        <path d="M46 68 Q60 80 74 68" fill="none" stroke="#06b6d4" strokeWidth="2" strokeLinecap="round" />
-        <rect x="25" y="25" width="14" height="14" rx="3" fill="none" stroke="#06b6d4" strokeWidth="1.5" opacity="0.5" />
-        <rect x="81" y="25" width="14" height="14" rx="3" fill="none" stroke="#06b6d4" strokeWidth="1.5" opacity="0.5" />
-        <rect x="25" y="81" width="14" height="14" rx="3" fill="none" stroke="#06b6d4" strokeWidth="1.5" opacity="0.5" />
-        <rect x="81" y="81" width="14" height="14" rx="3" fill="none" stroke="#06b6d4" strokeWidth="1.5" opacity="0.5" />
-      </svg>
-    ),
+    id: '03',
+    title: 'AI 合同/财务审核',
+    pain: '合同审核耗时长，财务票据人工处理效率低，风险条款容易遗漏，大量重复审核工作。',
+    solutions: ['合同风险点自动识别', '金额/条款/时间自动提取', '发票验真与报销审核', '财报自动摘要生成', '自动输出风险提示'],
+    value: ['合同审核时间从 2 小时降至 15 分钟', '错误率降低 80%', '审核人力减少 50%+', '提升财务与法务协同效率'],
+    tech: ['OCR', 'LLM 文档解析', '规则引擎', '工作流审批', '私有化部署'],
   },
   {
-    name: '言小影',
-    role: '口播数字人分身',
-    desc: '一键快速打造高清逼真数字人形象，高效生成专业口播短视频，打造专属 AI 分身，省去真人出镜拍摄烦恼。',
-    color: '#ec4899',
-    icon: (
-      <svg viewBox="0 0 120 120" className="w-full h-full">
-        <defs>
-          <linearGradient id="avatar-g" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#ec4899" stopOpacity="0.25" />
-            <stop offset="100%" stopColor="#ec4899" stopOpacity="0.08" />
-          </linearGradient>
-        </defs>
-        <rect width="120" height="120" rx="16" fill="url(#avatar-g)" />
-        <circle cx="60" cy="42" r="16" fill="none" stroke="#ec4899" strokeWidth="2" />
-        <path d="M30 90 Q30 68 60 68 Q90 68 90 90" fill="none" stroke="#ec4899" strokeWidth="2" />
-        <circle cx="90" cy="30" r="8" fill="none" stroke="#ec4899" strokeWidth="1.5" opacity="0.5" />
-        <line x1="90" y1="22" x2="90" y2="38" stroke="#ec4899" strokeWidth="1.5" opacity="0.5" />
-        <line x1="82" y1="30" x2="98" y2="30" stroke="#ec4899" strokeWidth="1.5" opacity="0.5" />
-      </svg>
-    ),
+    id: '04',
+    title: '企业 AI 知识库',
+    pain: '内部知识分散，老员工经验无法沉淀，新员工培训周期长，重复咨询占用大量时间。',
+    solutions: ['企业文档智能问答', '产品/培训资料统一检索', '新员工培训助手', '会议纪要自动归档', '权限化知识管理'],
+    value: ['知识查找时间降低 70%', '培训周期缩短 50%', '减少重复沟通与协作成本', '提升组织知识复用效率'],
+    tech: ['RAG', '向量数据库', '权限系统', '多文档解析', '企业内部部署'],
   },
   {
-    name: '商小绘',
-    role: '电商产品画师',
-    desc: '专注各类商品电商详情图、主图、场景海报智能生成，适配多行业风格，一键出高清商用视觉图，省去复杂设计流程。',
-    color: '#10b981',
-    icon: (
-      <svg viewBox="0 0 120 120" className="w-full h-full">
-        <defs>
-          <linearGradient id="shop-g" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#10b981" stopOpacity="0.25" />
-            <stop offset="100%" stopColor="#10b981" stopOpacity="0.08" />
-          </linearGradient>
-        </defs>
-        <rect width="120" height="120" rx="16" fill="url(#shop-g)" />
-        <rect x="28" y="30" width="64" height="50" rx="4" fill="none" stroke="#10b981" strokeWidth="2" />
-        <rect x="28" y="30" width="64" height="12" rx="4" fill="#10b981" opacity="0.15" />
-        <circle cx="45" cy="62" r="6" fill="none" stroke="#10b981" strokeWidth="1.5" />
-        <path d="M34 72 L42 60 L50 68 L58 56 L68 72" fill="none" stroke="#10b981" strokeWidth="1.5" strokeLinejoin="round" />
-        <rect x="72" y="55" width="12" height="18" rx="2" fill="none" stroke="#10b981" strokeWidth="1.5" />
-        <line x1="35" y1="90" x2="85" y2="90" stroke="#10b981" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
-      </svg>
-    ),
+    id: '05',
+    title: 'AI 供应链预测',
+    pain: '库存积压占用资金，缺货影响销售，补货依赖人工经验，无法及时发现滞销风险。',
+    solutions: ['销量预测分析', '安全库存智能计算', '自动补货建议', '滞销商品预警', '供应商风险评估'],
+    value: ['库存周转率提升 20%–30%', '缺货率下降 15%–25%', '降低库存资金占用', '提升供应链稳定性'],
+    tech: ['预测模型', '数据分析', 'ERP 对接', '自动化报表', '实时预警系统'],
   },
   {
-    name: '故小谣',
-    role: '民间故事编剧',
-    desc: '可根据指定主题、地域与风格，自动创作并生成完整民间故事解说文案与叙事短视频脚本，国风氛围感拉满。',
-    color: '#a855f7',
-    icon: (
-      <svg viewBox="0 0 120 120" className="w-full h-full">
-        <defs>
-          <linearGradient id="story-g" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#a855f7" stopOpacity="0.25" />
-            <stop offset="100%" stopColor="#a855f7" stopOpacity="0.08" />
-          </linearGradient>
-        </defs>
-        <rect width="120" height="120" rx="16" fill="url(#story-g)" />
-        <path d="M35 28 Q35 24 39 24 L81 24 Q85 24 85 28 L85 88 Q85 92 81 92 L45 92 Q35 92 35 82 Z" fill="none" stroke="#a855f7" strokeWidth="2" />
-        <line x1="35" y1="24" x2="35" y2="88" stroke="#a855f7" strokeWidth="2" />
-        <line x1="48" y1="38" x2="72" y2="38" stroke="#a855f7" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
-        <line x1="48" y1="48" x2="68" y2="48" stroke="#a855f7" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
-        <line x1="48" y1="58" x2="72" y2="58" stroke="#a855f7" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
-        <line x1="48" y1="68" x2="60" y2="68" stroke="#a855f7" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
-        <path d="M70 70 Q75 65 80 72 Q82 78 76 78 Q72 78 70 70" fill="#a855f7" opacity="0.3" />
-      </svg>
-    ),
+    id: '06',
+    title: 'AI 销售助手',
+    pain: '销售跟进效率低，客户信息管理混乱，新人培养周期长，成交经验难以复制。',
+    solutions: ['客户意向自动分析', 'AI 跟进话术生成', '销售通话录音分析', '成交概率预测', '回款风险预警', '自动同步 CRM'],
+    value: ['销售跟进效率提升 30%', '新人培训周期缩短 50%', '提升客户转化率', '降低逾期与坏账风险'],
+    tech: ['Agent', 'CRM 集成', '语音分析', '客户画像', '销售自动化 Workflow'],
   },
 ]
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-12 sm:py-16 px-4 sm:px-6">
-      <div className="max-w-5xl mx-auto">
+    <section id="projects" className="relative py-16 sm:py-24 px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto">
         <ScrollAnimation>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-[0.15em] text-center mb-8">
-            <span className="gradient-text">AI项目</span>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-[0.15em] text-center mb-4">
+            <span className="gradient-text">AI 落地案例</span>
           </h2>
+          <p className="text-center text-white/50 text-sm mb-14 max-w-2xl mx-auto">
+            帮助企业构建 AI Agent 与自动化系统，实现降本、提效与增长。
+          </p>
         </ScrollAnimation>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {projects.map((p, i) => (
-            <ScrollAnimation key={p.name} delay={i * 0.1}>
-              <div className="group card-glow rounded-2xl border border-white/10 bg-dark-card/60 backdrop-blur-sm overflow-hidden hover:bg-dark-surface/60 hover:border-white/20 transition-all duration-300">
-                {/* Image */}
-                <div className="aspect-[16/9] bg-dark-surface/40 flex items-center justify-center p-8 sm:p-10">
-                  {p.icon}
+            <ScrollAnimation key={p.id} delay={i * 0.08}>
+              <div className="group card-glow rounded-2xl border border-white/10 bg-dark-card/60 backdrop-blur-sm hover:bg-dark-surface/60 hover:border-neon-green/20 transition-all duration-300 h-full flex flex-col">
+                {/* Header */}
+                <div className="px-5 pt-5 pb-3 border-b border-white/5">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl font-black text-neon-green/25">
+                      {p.id}
+                    </span>
+                    <h3 className="text-base font-bold text-white group-hover:text-neon-green transition-colors">
+                      {p.title}
+                    </h3>
+                  </div>
                 </div>
 
-                {/* Content */}
-                <div className="p-5 sm:p-6">
-                  <div className="flex items-center gap-2 mb-1">
-                    <h3 className="text-base font-bold text-white group-hover:text-neon-green transition-colors">
-                      {p.name}
-                    </h3>
-                    <span className="text-xs px-2 py-0.5 rounded-full border border-white/10 text-white/40">
-                      {p.role}
-                    </span>
-                  </div>
-                  <p className="text-sm text-white/40 leading-relaxed mt-2 line-clamp-3">
-                    {p.desc}
+                {/* Pain */}
+                <div className="px-5 py-3 border-b border-white/5 bg-red-500/5">
+                  <h4 className="text-xs font-bold text-red-400 uppercase tracking-wider mb-1.5">
+                    企业痛点
+                  </h4>
+                  <p className="text-xs text-white/50 leading-relaxed">
+                    {p.pain}
                   </p>
-                  <div className="mt-4 pt-3 border-t border-white/5">
-                    <span className="text-xs text-neon-green/50">
-                      在线体验，敬请期待中
-                    </span>
+                </div>
+
+                {/* Solutions */}
+                <div className="px-5 py-3 border-t border-white/5 flex-1">
+                  <h4 className="text-xs font-semibold text-neon-green/80 uppercase tracking-wider mb-1.5">
+                    AI 解决方案
+                  </h4>
+                  <ul className="space-y-1">
+                    {p.solutions.map((s, j) => (
+                      <li key={j} className="flex items-start gap-1.5 text-xs text-white/55">
+                        <span className="text-neon-green mt-0.5 shrink-0">▸</span>
+                        <span>{s}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Value */}
+                <div className="px-5 py-3 border-t border-white/5">
+                  <h4 className="text-xs font-semibold text-neon-green/80 uppercase tracking-wider mb-1.5">
+                    项目价值
+                  </h4>
+                  <div className="flex flex-wrap gap-1.5">
+                    {p.value.map((v, j) => (
+                      <span key={j} className="text-[11px] px-2 py-0.5 rounded-full bg-neon-green/10 text-neon-green/80 border border-neon-green/15">
+                        {v}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Tech */}
+                <div className="px-5 py-3 border-t border-white/5">
+                  <h4 className="text-xs font-semibold text-white/30 uppercase tracking-wider mb-1.5">
+                    技术能力
+                  </h4>
+                  <div className="flex flex-wrap gap-1">
+                    {p.tech.map((t, j) => (
+                      <span key={j} className="text-[10px] px-1.5 py-0.5 rounded border border-white/8 text-white/30">
+                        {t}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>

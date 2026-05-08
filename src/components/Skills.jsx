@@ -80,9 +80,12 @@ export default function Skills() {
     <section id="skills" className="relative py-12 sm:py-16 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
         <ScrollAnimation>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-[0.15em] text-center mb-8">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-[0.15em] text-center mb-4">
             <span className="gradient-text">技能栈</span>
           </h2>
+          <p className="text-center text-white/50 text-sm mb-12 max-w-2xl mx-auto">
+            懂业务逻辑的 AI 技术实践者，擅长用 Vibe Coding 快速交付商用原型。
+          </p>
         </ScrollAnimation>
 
         <ScrollAnimation>
@@ -179,10 +182,6 @@ export default function Skills() {
                 </span>
               ))}
             </div>
-
-            <p className="text-center text-sm text-white/40 mt-0 mb-4">
-              懂业务逻辑的 AI 技术实践者，擅长用 Vibe Coding 快速交付商用原型。
-            </p>
 
             {/* Description cards */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 mt-2">

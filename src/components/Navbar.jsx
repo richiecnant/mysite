@@ -7,7 +7,7 @@ const navLinks = [
   { label: '首页', href: '#top' },
   { label: '历程', href: '#experience' },
   { label: '技能栈', href: '#skills' },
-  { label: '项目', href: '#projects' },
+  { label: 'AI 落地案例', href: '#projects' },
   { label: '联系', href: '#contact' },
 ]
 
