@@ -67,7 +67,7 @@ export default function MatrixRain() {
           if (distFromHead === 1) {
             ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`
           } else if (distFromHead < 4) {
-            ctx.fillStyle = `rgba(180, 255, 180, ${alpha})`
+            ctx.fillStyle = `rgba(0, 255, 136, ${alpha})`
           } else {
             ctx.fillStyle = `rgba(0, 200, 80, ${alpha * 0.7})`
           }
