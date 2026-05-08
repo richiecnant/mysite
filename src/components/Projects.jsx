@@ -5,21 +5,21 @@ const projects = [
     name: '礼小夯',
     role: '礼品顾问',
     desc: '深耕全场景礼品甄选，适配节日、商务、亲友送礼等各类需求，精准洞察心意，定制专属高质感礼品方案，省心又有格调。',
-    color: '#f59e0b',
+    color: '#00ff88',
     icon: (
       <svg viewBox="0 0 120 120" className="w-full h-full">
         <defs>
           <linearGradient id="gift-g" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.25" />
-            <stop offset="100%" stopColor="#f59e0b" stopOpacity="0.08" />
+            <stop offset="0%" stopColor="#00ff88" stopOpacity="0.25" />
+            <stop offset="100%" stopColor="#00ff88" stopOpacity="0.08" />
           </linearGradient>
         </defs>
         <rect width="120" height="120" rx="16" fill="url(#gift-g)" />
-        <rect x="30" y="55" width="60" height="35" rx="4" fill="none" stroke="#f59e0b" strokeWidth="2" />
-        <rect x="30" y="50" width="60" height="10" rx="3" fill="none" stroke="#f59e0b" strokeWidth="2" />
-        <line x1="60" y1="50" x2="60" y2="90" stroke="#f59e0b" strokeWidth="2" />
-        <path d="M60 50 Q50 30 40 38 Q35 42 42 48" fill="none" stroke="#f59e0b" strokeWidth="2" />
-        <path d="M60 50 Q70 30 80 38 Q85 42 78 48" fill="none" stroke="#f59e0b" strokeWidth="2" />
+        <rect x="30" y="55" width="60" height="35" rx="4" fill="none" stroke="#00ff88" strokeWidth="2" />
+        <rect x="30" y="50" width="60" height="10" rx="3" fill="none" stroke="#00ff88" strokeWidth="2" />
+        <line x1="60" y1="50" x2="60" y2="90" stroke="#00ff88" strokeWidth="2" />
+        <path d="M60 50 Q50 30 40 38 Q35 42 42 48" fill="none" stroke="#00ff88" strokeWidth="2" />
+        <path d="M60 50 Q70 30 80 38 Q85 42 78 48" fill="none" stroke="#00ff88" strokeWidth="2" />
       </svg>
     ),
   },
@@ -27,20 +27,20 @@ const projects = [
     name: '抖小文',
     role: '抖音口播文案大师',
     desc: '支持抖音视频文案一键提取、爆款脚本拆解与创意二创，适配各类赛道口播风格，帮你轻松写出抓人引流的优质文案。',
-    color: '#8b5cf6',
+    color: '#a855f7',
     icon: (
       <svg viewBox="0 0 120 120" className="w-full h-full">
         <defs>
           <linearGradient id="dou-g" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.25" />
-            <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.08" />
+            <stop offset="0%" stopColor="#a855f7" stopOpacity="0.25" />
+            <stop offset="100%" stopColor="#a855f7" stopOpacity="0.08" />
           </linearGradient>
         </defs>
         <rect width="120" height="120" rx="16" fill="url(#dou-g)" />
-        <rect x="35" y="25" width="50" height="70" rx="6" fill="none" stroke="#8b5cf6" strokeWidth="2" />
-        <polygon points="52,45 52,70 72,57.5" fill="#8b5cf6" opacity="0.6" />
-        <path d="M75 35 Q80 25 82 40 Q84 55 78 45" fill="none" stroke="#8b5cf6" strokeWidth="2" />
-        <line x1="42" y1="82" x2="55" y2="82" stroke="#8b5cf6" strokeWidth="1.5" strokeLinecap="round" />
+        <rect x="35" y="25" width="50" height="70" rx="6" fill="none" stroke="#a855f7" strokeWidth="2" />
+        <polygon points="52,45 52,70 72,57.5" fill="#a855f7" opacity="0.6" />
+        <path d="M75 35 Q80 25 82 40 Q84 55 78 45" fill="none" stroke="#a855f7" strokeWidth="2" />
+        <line x1="42" y1="82" x2="55" y2="82" stroke="#a855f7" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -162,7 +162,7 @@ export default function Projects() {
                 {/* Content */}
                 <div className="p-5 sm:p-6">
                   <div className="flex items-center gap-2 mb-1">
-                    <h3 className="text-base font-bold text-white group-hover:text-amber-gold transition-colors">
+                    <h3 className="text-base font-bold text-white group-hover:text-neon-green transition-colors">
                       {p.name}
                     </h3>
                     <span className="text-xs px-2 py-0.5 rounded-full border border-white/10 text-white/40">
@@ -173,7 +173,7 @@ export default function Projects() {
                     {p.desc}
                   </p>
                   <div className="mt-4 pt-3 border-t border-white/5">
-                    <span className="text-xs text-amber-gold/50">
+                    <span className="text-xs text-neon-green/50">
                       在线体验，敬请期待中
                     </span>
                   </div>

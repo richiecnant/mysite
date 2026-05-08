@@ -65,7 +65,7 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 border-b border-white/5 transition-colors duration-300 ${
         scrolled
-          ? 'bg-dark/90 backdrop-blur-xl !border-amber-gold/10 shadow-lg shadow-amber-gold/5'
+          ? 'bg-dark/90 backdrop-blur-xl !border-neon-green/10 shadow-lg shadow-neon-green/5'
           : 'bg-transparent'
       }`}
     >
@@ -77,7 +77,7 @@ export default function Navbar() {
             window.scrollTo({ top: 0, behavior: 'smooth' })
           }
         }} className="flex items-center gap-3 group">
-          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="logo" className="h-8 w-8 rounded-full object-cover" />
+          <img src={`${import.meta.env.BASE_URL}logo1.png`} alt="logo" className="h-8 w-8 rounded-full object-cover" />
           <span className="text-lg font-bold gradient-text">
             举个啥栗子 · AGI 2026 在路上
           </span>
@@ -91,7 +91,7 @@ export default function Navbar() {
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
               className={`text-sm transition-colors ${
-                isInsight ? 'text-white/40 hover:text-amber-gold' : 'text-white/60 hover:text-amber-gold'
+                isInsight ? 'text-white/40 hover:text-neon-green' : 'text-white/60 hover:text-neon-green'
               }`}
             >
               {link.label}
@@ -102,8 +102,8 @@ export default function Navbar() {
             to="/insight"
             className={`text-sm transition-colors ${
               isInsight
-                ? 'text-amber-gold font-medium'
-                : 'text-white/60 hover:text-amber-gold'
+                ? 'text-neon-green font-medium'
+                : 'text-white/60 hover:text-neon-green'
             }`}
           >
             栗子洞察
@@ -113,7 +113,7 @@ export default function Navbar() {
         {/* Mobile menu button */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden rounded-lg p-2 text-white/60 hover:text-amber-gold hover:bg-white/5 transition-all"
+          className="md:hidden rounded-lg p-2 text-white/60 hover:text-neon-green hover:bg-white/5 transition-all"
         >
           {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -134,7 +134,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="block text-sm text-white/70 hover:text-amber-gold transition-colors py-2"
+                  className="block text-sm text-white/70 hover:text-neon-green transition-colors py-2"
                 >
                   {link.label}
                 </a>
@@ -144,7 +144,7 @@ export default function Navbar() {
                   to="/insight"
                   onClick={() => setMobileOpen(false)}
                   className={`block text-sm transition-colors py-2 ${
-                    isInsight ? 'text-amber-gold font-medium' : 'text-white/70 hover:text-amber-gold'
+                    isInsight ? 'text-neon-green font-medium' : 'text-white/70 hover:text-neon-green'
                   }`}
                 >
                   栗子洞察

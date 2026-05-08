@@ -10,16 +10,16 @@ function YearBadge({ year, className = '' }) {
 
   if (parts) {
     return (
-      <span className={`inline-flex flex-col items-center rounded-full bg-dark border border-amber-gold/40 font-bold text-amber-gold ${className}`}>
+      <span className={`inline-flex flex-col items-center rounded-full bg-dark border border-neon-green/40 font-bold text-neon-green ${className}`}>
         <span className="leading-tight">{parts[0]}</span>
-        <span className="w-4 h-px bg-amber-gold/40" />
+        <span className="w-4 h-px bg-neon-green/40" />
         <span className="leading-tight">{parts[1]}</span>
       </span>
     )
   }
 
   return (
-    <span className={`inline-block rounded-full bg-dark border border-amber-gold/40 font-bold text-amber-gold whitespace-nowrap ${className}`}>
+    <span className={`inline-block rounded-full bg-dark border border-neon-green/40 font-bold text-neon-green whitespace-nowrap ${className}`}>
       {year}
     </span>
   )
@@ -86,8 +86,8 @@ export default function Experience() {
                   {/* Desktop card */}
                   <div className={`hidden md:block md:w-1/2 ${isLeft ? 'md:pr-12' : 'md:pl-12 md:ml-auto'}`}>
                     <ScrollAnimation delay={i * 0.15}>
-                      <div className="group card-glow rounded-2xl border border-white/10 bg-dark-card/60 backdrop-blur-sm p-6 hover:bg-dark-surface/60 hover:border-amber-gold/20 transition-all duration-300 text-left">
-                        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-amber-gold transition-colors">
+                      <div className="group card-glow rounded-2xl border border-white/10 bg-dark-card/60 backdrop-blur-sm p-6 hover:bg-dark-surface/60 hover:border-neon-green/20 transition-all duration-300 text-left">
+                        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-neon-green transition-colors">
                           {exp.title}
                         </h3>
                         <p className="text-sm text-white/50 leading-relaxed mb-4">
@@ -97,7 +97,7 @@ export default function Experience() {
                           {exp.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="text-xs px-3 py-1 rounded-full border border-amber-gold/20 text-amber-gold/70 bg-amber-gold/5"
+                              className="text-xs px-3 py-1 rounded-full border border-neon-green/20 text-neon-green/70 bg-neon-green/5"
                             >
                               {tag}
                             </span>
@@ -110,8 +110,8 @@ export default function Experience() {
                   {/* Mobile card */}
                   <div className="md:hidden pl-14">
                     <ScrollAnimation delay={i * 0.15}>
-                      <div className="group card-glow rounded-2xl border border-white/10 bg-dark-card/60 backdrop-blur-sm p-5 hover:bg-dark-surface/60 hover:border-amber-gold/20 transition-all duration-300">
-                        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-amber-gold transition-colors">
+                      <div className="group card-glow rounded-2xl border border-white/10 bg-dark-card/60 backdrop-blur-sm p-5 hover:bg-dark-surface/60 hover:border-neon-green/20 transition-all duration-300">
+                        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-neon-green transition-colors">
                           {exp.title}
                         </h3>
                         <p className="text-sm text-white/50 leading-relaxed mb-3">
@@ -121,7 +121,7 @@ export default function Experience() {
                           {exp.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="text-xs px-3 py-1 rounded-full border border-amber-gold/20 text-amber-gold/70 bg-amber-gold/5"
+                              className="text-xs px-3 py-1 rounded-full border border-neon-green/20 text-neon-green/70 bg-neon-green/5"
                             >
                               {tag}
                             </span>

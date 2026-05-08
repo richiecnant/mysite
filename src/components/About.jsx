@@ -37,10 +37,10 @@ export default function About() {
             <ScrollAnimation key={card.title} delay={i * 0.15}>
               <div className="group card-glow rounded-2xl border border-white/10 bg-dark-card/60 backdrop-blur-sm p-6 sm:p-8 h-full hover:bg-dark-surface/60 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-gold/10 text-amber-gold group-hover:bg-amber-gold/20 transition-colors">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-neon-green/10 text-neon-green group-hover:bg-neon-green/20 transition-colors">
                     <card.icon className="h-5 w-5" />
                   </div>
-                  <h3 className="text-xl font-semibold text-amber-gold">
+                  <h3 className="text-xl font-semibold text-neon-green">
                     {card.title}
                   </h3>
                 </div>

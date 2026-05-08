@@ -23,7 +23,7 @@ const contacts = [
     label: '邮箱',
     value: 'iant@vip.qq.com',
     href: 'mailto:iant@vip.qq.com',
-    color: 'hover:text-amber-gold',
+    color: 'hover:text-neon-green',
   },
   {
     icon: MessageCircle,
@@ -64,9 +64,9 @@ export default function Contact() {
                 onClick={c.scrollToTop ? (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) } : undefined}
                 target={c.href.startsWith('http') ? '_blank' : undefined}
                 rel={c.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className={`group flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-dark-card/60 backdrop-blur-sm p-6 hover:bg-dark-surface/60 hover:border-amber-gold/20 transition-all duration-300 ${c.color}`}
+                className={`group flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-dark-card/60 backdrop-blur-sm p-6 hover:bg-dark-surface/60 hover:border-neon-green/20 transition-all duration-300 ${c.color}`}
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 text-white/50 group-hover:bg-amber-gold/10 group-hover:text-amber-gold transition-all">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 text-white/50 group-hover:bg-neon-green/10 group-hover:text-neon-green transition-all">
                   <c.icon className="h-5 w-5" />
                 </div>
                 <div className="text-center">

@@ -27,7 +27,7 @@ function renderContent(content) {
 
     if (firstLine.startsWith('【') && firstLine.endsWith('】')) {
       return (
-        <div key={i} className="mb-6 pl-4 border-l-2 border-amber-gold/40">
+        <div key={i} className="mb-6 pl-4 border-l-2 border-neon-green/40">
           {lines.map((line, j) => (
             <p key={j} className="text-white/50 leading-relaxed italic">{renderInline(line.replace(/^【|】$/g, ''))}</p>
           ))}
@@ -38,7 +38,7 @@ function renderContent(content) {
     if (SECTION_RE.test(firstLine)) {
       return (
         <div key={i} className="mt-8 mb-4">
-          <h2 className="text-lg sm:text-xl font-bold text-amber-gold mb-1">{renderInline(firstLine)}</h2>
+          <h2 className="text-lg sm:text-xl font-bold text-neon-green mb-1">{renderInline(firstLine)}</h2>
           {lines.slice(1).map((line, j) => (
             <p key={j} className="text-white/60 leading-relaxed mt-1">{renderInline(line)}</p>
           ))}
@@ -59,7 +59,7 @@ function renderContent(content) {
     if (lines.length === 1 && STANDALONE_RE.test(firstLine) && !/[。！？，；：]$/.test(firstLine)) {
       return (
         <div key={i} className="mt-8 mb-4">
-          <h2 className="text-lg sm:text-xl font-bold text-amber-gold mb-1">{renderInline(firstLine)}</h2>
+          <h2 className="text-lg sm:text-xl font-bold text-neon-green mb-1">{renderInline(firstLine)}</h2>
         </div>
       )
     }
@@ -84,7 +84,7 @@ export default function ArticleDetail() {
       <section className="relative min-h-screen pt-24 pb-16 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-white/50">文章不存在</p>
-          <Link to="/insight" className="text-amber-gold hover:underline mt-4 inline-block">
+          <Link to="/insight" className="text-neon-green hover:underline mt-4 inline-block">
             返回洞察主页
           </Link>
         </div>
@@ -97,11 +97,11 @@ export default function ArticleDetail() {
       <div className="max-w-3xl mx-auto">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-1.5 text-sm text-white/40 mb-8 flex-wrap">
-          <Link to="/" className="hover:text-amber-gold transition-colors">首页</Link>
+          <Link to="/" className="hover:text-neon-green transition-colors">首页</Link>
           <ChevronRight className="h-3.5 w-3.5 shrink-0" />
-          <Link to="/insight" className="hover:text-amber-gold transition-colors">栗子洞察</Link>
+          <Link to="/insight" className="hover:text-neon-green transition-colors">栗子洞察</Link>
           <ChevronRight className="h-3.5 w-3.5 shrink-0" />
-          <Link to={`/insight/${category}`} className="hover:text-amber-gold transition-colors">{cat.name}</Link>
+          <Link to={`/insight/${category}`} className="hover:text-neon-green transition-colors">{cat.name}</Link>
           <ChevronRight className="h-3.5 w-3.5 shrink-0" />
           <span className="text-white/60 truncate min-w-0">{article.title}</span>
         </nav>

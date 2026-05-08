@@ -13,7 +13,7 @@ export default function ArticleList() {
       <section className="relative min-h-screen pt-24 pb-16 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-white/50">分类不存在</p>
-          <Link to="/insight" className="text-amber-gold hover:underline mt-4 inline-block">
+          <Link to="/insight" className="text-neon-green hover:underline mt-4 inline-block">
             返回洞察主页
           </Link>
         </div>
@@ -26,9 +26,9 @@ export default function ArticleList() {
       <div className="max-w-3xl mx-auto">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-1.5 text-sm text-white/40 mb-8">
-          <Link to="/" className="hover:text-amber-gold transition-colors">首页</Link>
+          <Link to="/" className="hover:text-neon-green transition-colors">首页</Link>
           <ChevronRight className="h-3.5 w-3.5 shrink-0" />
-          <Link to="/insight" className="hover:text-amber-gold transition-colors">栗子洞察</Link>
+          <Link to="/insight" className="hover:text-neon-green transition-colors">栗子洞察</Link>
           <ChevronRight className="h-3.5 w-3.5 shrink-0" />
           <span className="text-white/60">{cat.name}</span>
         </nav>
@@ -58,11 +58,11 @@ export default function ArticleList() {
               >
                 <Link
                   to={`/insight/${category}/${article.slug}`}
-                  className="group flex items-center gap-4 rounded-xl border border-white/10 bg-dark-card/60 backdrop-blur-sm p-5 hover:bg-dark-surface/60 hover:border-amber-gold/20 transition-all duration-300"
+                  className="group flex items-center gap-4 rounded-xl border border-white/10 bg-dark-card/60 backdrop-blur-sm p-5 hover:bg-dark-surface/60 hover:border-neon-green/20 transition-all duration-300"
                 >
-                  <FileText className="h-5 w-5 text-white/20 group-hover:text-amber-gold transition-colors shrink-0" />
+                  <FileText className="h-5 w-5 text-white/20 group-hover:text-neon-green transition-colors shrink-0" />
                   <div className="min-w-0">
-                    <h3 className="text-sm sm:text-base font-semibold text-white group-hover:text-amber-gold transition-colors truncate">
+                    <h3 className="text-sm sm:text-base font-semibold text-white group-hover:text-neon-green transition-colors truncate">
                       {article.title}
                     </h3>
                     {article.date && (

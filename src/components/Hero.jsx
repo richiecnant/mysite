@@ -25,10 +25,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-amber-gold/30 bg-dark-card/60 backdrop-blur-sm"
+            className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-neon-green/30 bg-dark-card/60 backdrop-blur-sm"
           >
-            <span className="w-2.5 h-2.5 bg-amber-gold rounded-full pulse-dot" />
-            <span className="text-xs uppercase tracking-wider text-amber-gold">
+            <span className="w-2.5 h-2.5 bg-neon-green rounded-full pulse-dot" />
+            <span className="text-xs uppercase tracking-wider text-neon-green">
               企业AI落地实战 | 开放协作中
             </span>
           </motion.div>
@@ -42,7 +42,7 @@ export default function Hero() {
             {/* Typewriter */}
             <div className="flex items-center gap-2 text-lg sm:text-xl text-white/70 h-8">
               <span className="gradient-text font-medium">{currentRole}</span>
-              <span className="w-[2px] h-5 bg-amber-gold cursor-blink inline-block" />
+              <span className="w-[2px] h-5 bg-neon-green cursor-blink inline-block" />
             </div>
           </div>
 
@@ -68,7 +68,7 @@ export default function Hero() {
             {['不搞培训', '不卖课程', '举个栗子', '唠点干货'].map((item) => (
               <span
                 key={item}
-                className="px-3 py-2 rounded-xl border border-amber-gold/20 bg-amber-gold/5 text-xs sm:text-sm text-amber-gold/80 text-center"
+                className="px-3 py-2 rounded-xl border border-neon-green/20 bg-neon-green/5 text-xs sm:text-sm text-neon-green/80 text-center"
               >
                 {item}
               </span>
@@ -85,8 +85,8 @@ export default function Hero() {
         >
           <div className="relative">
             {/* Glow behind avatar */}
-            <div className="absolute -inset-8 bg-gradient-to-br from-amber-gold/20 to-purple-accent/20 rounded-full blur-3xl" />
-            <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full border-2 border-amber-gold/20 overflow-hidden bg-dark-card">
+            <div className="absolute -inset-8 bg-gradient-to-br from-neon-green/20 to-purple-accent/20 rounded-full blur-3xl" />
+            <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full border-2 border-neon-green/20 overflow-hidden bg-dark-card">
               <img
                 src={`${import.meta.env.BASE_URL}avatar.jpeg`}
                 alt="举个啥栗子"

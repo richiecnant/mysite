@@ -97,16 +97,16 @@ export default function Skills() {
                   <svg viewBox={`0 0 ${SVG_SIZE} ${SVG_SIZE}`} className="w-full block">
                     <defs>
                       <radialGradient id="radarBg" cx="50%" cy="50%" r="50%">
-                        <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.08" />
-                        <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.03" />
+                        <stop offset="0%" stopColor="#00ff88" stopOpacity="0.08" />
+                        <stop offset="100%" stopColor="#a855f7" stopOpacity="0.03" />
                       </radialGradient>
                       <linearGradient id="dataFill" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.3" />
-                        <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.2" />
+                        <stop offset="0%" stopColor="#00ff88" stopOpacity="0.3" />
+                        <stop offset="100%" stopColor="#a855f7" stopOpacity="0.2" />
                       </linearGradient>
                       <linearGradient id="dataStroke" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#f59e0b" />
-                        <stop offset="100%" stopColor="#8b5cf6" />
+                        <stop offset="0%" stopColor="#00ff88" />
+                        <stop offset="100%" stopColor="#a855f7" />
                       </linearGradient>
                     </defs>
 
@@ -155,7 +155,7 @@ export default function Skills() {
                           cy={p.y}
                           r="4"
                           fill="#0a0a0f"
-                          stroke="#f59e0b"
+                          stroke="#00ff88"
                           strokeWidth="2"
                         />
                       )
@@ -191,7 +191,7 @@ export default function Skills() {
                   key={s.name}
                   className="flex items-center gap-3 rounded-xl border border-white/5 bg-white/[0.02] px-3 py-2.5"
                 >
-                  <div className="text-lg sm:text-xl font-bold text-amber-gold shrink-0">{s.percent}%</div>
+                  <div className="text-lg sm:text-xl font-bold text-neon-green shrink-0">{s.percent}%</div>
                   <div className="min-w-0">
                     <div className="text-sm font-semibold text-white">{s.name}</div>
                     <div className="text-[10px] text-white/30 mt-1 truncate">{s.detail}</div>

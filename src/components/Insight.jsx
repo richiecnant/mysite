@@ -10,7 +10,7 @@ export default function Insight() {
         {/* Back to home */}
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-amber-gold transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-neon-green transition-colors mb-8"
         >
           <ArrowLeft className="h-4 w-4" />
           返回首页
@@ -44,13 +44,13 @@ export default function Insight() {
               >
                 <Link
                   to={`/insight/${cat.slug}`}
-                  className="group block rounded-2xl border border-white/10 bg-dark-card/60 backdrop-blur-sm p-6 hover:bg-dark-surface/60 hover:border-amber-gold/20 transition-all duration-300"
+                  className="group block rounded-2xl border border-white/10 bg-dark-card/60 backdrop-blur-sm p-6 hover:bg-dark-surface/60 hover:border-neon-green/20 transition-all duration-300"
                 >
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-bold text-white group-hover:text-amber-gold transition-colors">
+                    <h3 className="text-lg font-bold text-white group-hover:text-neon-green transition-colors">
                       {cat.name}
                     </h3>
-                    <ArrowRight className="h-4 w-4 text-white/20 group-hover:text-amber-gold transition-colors mt-1" />
+                    <ArrowRight className="h-4 w-4 text-white/20 group-hover:text-neon-green transition-colors mt-1" />
                   </div>
                   <p className="text-sm text-white/40 leading-relaxed mb-3">
                     {cat.desc}

@@ -4,8 +4,10 @@
   --color-dark: #0a0a0f;
   --color-dark-card: #111827;
   --color-dark-surface: #1a1a2e;
-  --color-amber-gold: #f59e0b;
-  --color-purple-accent: #8b5cf6;
+  --color-neon-green: #00ff88;
+  --color-purple-accent: #a855f7;
+  --color-amber-gold: #d97706;
+  --color-cyan: #06b6d8;
 }
 
 @layer base {
@@ -27,7 +29,7 @@
   }
 
   ::selection {
-    background-color: rgba(245, 158, 11, 0.3);
+    background-color: rgba(0, 255, 136, 0.3);
     color: #fff;
   }
 }
@@ -35,15 +37,15 @@
 /* Cyberpunk grid overlay */
 .cyber-grid {
   background-image:
-    linear-gradient(rgba(245, 158, 11, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245, 158, 11, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(0, 255, 136, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 136, 0.06) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
 /* Breathing pulse animation */
 @keyframes pulse-glow {
-  0%, 100% { opacity: 1; box-shadow: 0 0 4px var(--color-amber-gold); }
-  50% { opacity: 0.5; box-shadow: 0 0 12px var(--color-amber-gold); }
+  0%, 100% { opacity: 1; box-shadow: 0 0 4px var(--color-neon-green); }
+  50% { opacity: 0.5; box-shadow: 0 0 12px var(--color-neon-green); }
 }
 
 .pulse-dot {
@@ -62,7 +64,7 @@
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-amber-gold), var(--color-purple-accent));
+  background: linear-gradient(135deg, var(--color-neon-green), var(--color-purple-accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -77,7 +79,7 @@
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(139, 92, 246, 0.2));
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(168, 85, 247, 0.2));
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s;
@@ -94,9 +96,9 @@
   background: var(--color-dark);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(245, 158, 11, 0.3);
+  background: rgba(0, 255, 136, 0.3);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(245, 158, 11, 0.5);
+  background: rgba(0, 255, 136, 0.5);
 }

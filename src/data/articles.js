@@ -15,7 +15,7 @@ export const categories = [
     slug: 'tool',
     name: '研·工具',
     desc: 'Vibe Coding、Prompts、工具测评',
-    color: '#f59e0b',
+    color: '#00ff88',
   },
   {
     slug: 'product',
