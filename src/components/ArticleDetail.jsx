@@ -7,6 +7,9 @@ const SECTION_RE = /^(引言[：:]|结语[：:]|一[、.]|二[、.]|三[、.]|�
 const SUB_SECTION_RE = /^(\d+\.\s+.+)/
 const STANDALONE_RE = /^.{2,20}$/
 const BOLD_RE = /\*\*(.+?)\*\*/g
+const MD_HEADER_RE = /^(#{1,3})\s+(.+)$/
+const MD_LIST_RE = /^[-*]\s+(.+)$/
+const MD_QUOTE_RE = /^>\s*(.*)$/
 
 function renderInline(text) {
   const parts = text.split(BOLD_RE)
@@ -23,6 +26,56 @@ function renderContent(content) {
 
     if (firstLine === '---') {
       return <hr key={i} className="my-8 border-white/10" />
+    }
+
+    // Markdown headers: # ## ###
+    const headerMatch = firstLine.match(MD_HEADER_RE)
+    if (headerMatch) {
+      const level = headerMatch[1].length
+      const text = headerMatch[2]
+      const restLines = lines.slice(1)
+      return (
+        <div key={i} className={level === 1 ? 'mt-10 mb-5' : 'mt-8 mb-4'}>
+          <h2 className="text-lg sm:text-xl font-bold text-neon-green mb-1">{renderInline(text)}</h2>
+          {restLines.map((line, j) => (
+            <p key={j} className="text-white/60 leading-relaxed mt-1">{renderInline(line)}</p>
+          ))}
+        </div>
+      )
+    }
+
+    // Blockquotes: > text
+    if (firstLine.startsWith('>')) {
+      return (
+        <div key={i} className="mb-6 pl-4 border-l-2 border-neon-green/40">
+          {lines.map((line, j) => {
+            const quoteText = line.replace(/^>\s*/, '')
+            return (
+              <p key={j} className="text-white/50 leading-relaxed italic">{renderInline(quoteText)}</p>
+            )
+          })}
+        </div>
+      )
+    }
+
+    // List items: - text or * text
+    if (MD_LIST_RE.test(firstLine)) {
+      return (
+        <ul key={i} className="mb-4 space-y-1.5">
+          {lines.map((line, j) => {
+            const match = line.trim().match(MD_LIST_RE)
+            if (match) {
+              return (
+                <li key={j} className="flex items-start gap-2 text-white/60 leading-relaxed">
+                  <span className="text-neon-green mt-0.5 shrink-0">▸</span>
+                  <span>{renderInline(match[1])}</span>
+                </li>
+              )
+            }
+            return null
+          })}
+        </ul>
+      )
     }
 
     if (firstLine.startsWith('【') && firstLine.endsWith('】')) {
