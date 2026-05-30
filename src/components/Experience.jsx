@@ -30,7 +30,7 @@ const experiences = [
     year: '2026至今',
     title: 'OPC',
     desc: 'AI 正以前所未有的力量，掀起全行业的变革浪潮，每一个赛道都在被重新定义。',
-    tags: ['一人公司', 'Vibe Coding', 'Agent'],
+    tags: ['超级个体', '一人公司', 'Vibe Coding', 'Agent'],
   },
   {
     year: '2012-2025',
